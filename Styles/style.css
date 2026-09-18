@@ -435,6 +435,9 @@ margin-bottom: 10px;
   grid-column: 5 / -5; 
   text-align: center;
 }
+.gallery__subtitle-ithem{
+padding-bottom: 15px;
+}
 /* Обертка для каждого фото */
 .gallery-item {
   position: relative;  /* База для абсолютного позиционирования текста */
@@ -465,6 +468,17 @@ margin-bottom: 10px;
   z-index: 2;          /* Текст поверх картинки */
   pointer-events: none; /* Курсор мыши проходит сквозь текст на картинку */
 }
+.gallery-button {
+    font-family:inherit; /* наследование шрифта */
+    font-size: 18px;
+    background-color: #342F2C;
+    border-color: rgb(20, 13, 13);
+    padding: 10px 32px;
+}
+.gallery-button:hover {
+  color: #fff;
+  background-color: #79081a;
+}
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
   .gallery {
@@ -476,6 +490,87 @@ margin-bottom: 10px;
   .gallery {
     grid-template-columns: 1fr; /* 1 колонка на смартфонах */
   }
+}
+/*________________________-*/
+
+.ansver-deteils {
+  padding: 25px 50px;
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px; /* Отступы между картинками */
+  padding: 0px 35px;
+ /* max-width: 1200px; */
+  width: 100%;
+  margin: 0 auto;
+}
+.ansver-header {
+   grid-column: 1 / -1; 
+   margin-bottom: -5px;
+   }
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  color: #fff;
+  font-size: 18px;
+  list-style: none;
+  background-color: #999999;
+}
+.question-icon {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  flex-shrink: 0; 
+    background: #342F2C;
+  border-radius: 50px;
+   padding: 5px;
+  width: 30px;  /* Задайте нужную ширину */
+  height: 30px; /* Задайте нужную высоту */
+  object-fit: contain;
+
+}
+.question img {
+  width: 12px;
+  
+}
+
+.question::-webkit-details-marker {
+  display: none;
+}
+details[open] .question img  {
+  rotate: 180deg;
+}
+.answer {
+  padding: 20px 20px;
+  color:  #342F2C;
+  background-color: #EEEEEE;
+}
+.ansver__messenger-list {
+    display: flex;
+    gap: 60px;
+    padding-top: 25px;
+ }
+ .ansver-ithem {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 25px;
+}
+.ansver-subtitle {
+  font-size: 22px;
+  padding-bottom: 25px;
+}
+.avito_ithem {
+ display: flex;
+ flex-direction: row;
+ gap: 15px;
+ align-items: center; 
+}
+.avito__icon
+{
+ max-width: 120px;
 }
 /*________________________-*/
 .footer {
