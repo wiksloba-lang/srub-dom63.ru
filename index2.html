@@ -14,24 +14,24 @@
   </head>
   <body class="page">
     <header class="header content-section">
-      <a class="header__logo">
-        <img class="header__logo-image" src="./svg/favicon.svg" alt="Лого" />
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-image" src="./svg/favicon.svg" alt="Лого" href="index1.html"/>
       </a>
       <nav class="header_menu">
         <ul class="header_menu-list">
           <li class="header_menu-item">
-            <a class="header__menu-link color__link" href="#0" target="_blank"
+            <a class="header__menu-link color__link" href="index2.html" target="_blank"
               >Готовые проекты</a
             >
           </li>
           <li class="header_menu-item">
-            <a class="header__menu-link color__link" href="#0" target="_blank"
+            <a class="header__menu-link color__link" href="index3.html" target="_blank"
               >Post and Beam</a
             >
           </li>
           <li class="header_menu-item">
-            <a class="header__menu-link color__link" href="#0" target="_blank"
-              >Бани эконом</a
+            <a class="header__menu-link color__link" href="index4.html" target="_blank"
+              >Ульяновские срубы</a
             >
           </li>
           <!--<li class="header_menu-item color__link">
@@ -40,9 +40,9 @@
         </ul>
       </nav>
       <address class="address header__contacts">
-        <a class="contacts-block__link" href="tel:+79277708595"
+        <a class="contacts-block__link" href="tel:+79022996176"
           ><img class="header__icon" src="./images/phone.svg" alt="Телефон" />
-          +7 927 770 8595</a
+          +7 902 299 6176</a
         >
         <div class="header_ithem">
           <a
@@ -63,6 +63,7 @@
     </header>
     <main>
       <section class="content-section content-section_theme_red">
+        
         <div class="complectation-list-column">
           <h1 class="prodjekt_column-title section___title heading">
             Комплектация
@@ -132,40 +133,52 @@
           </div>
         </div>
       </section>
-
       <section class="content-section prodjekt_column-section">
-        <h1 class="section___title heading">Проекты домов</h1>
-        <div class="content-section projekt__card projekt__card-text">
+  <!-- Важно: Input'ы должны лежать ПЕРЕД элементами управления и карточками -->
+  <input type="radio" id="btn-all" name="filter" class="filter-input" checked>
+  <input type="radio" id="btn-dom" name="filter" class="filter-input">
+  <input type="radio" id="btn-banja" name="filter" class="filter-input">
+
+  <!-- Кнопки управления (кликая на label, мы переключаем input) -->
+  <div class="filter-controls section___title heading">
+    <label for="btn-all" class="filter-btn">Все проекты</label>
+    <label for="btn-dom" class="filter-btn">Дома</label>
+    <label for="btn-banja" class="filter-btn">Бани</label>
+  </div>
+
+  <!-- Список карточек -->
+  <div class="card-container-one">
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
           <article class="projekt__slider">
             <div class="slider-container">
               <div class="main-window" id="mainWindow">
                 <img
-                  src="./images/prodject/card1/a.png"
+                  src="./images/prodject/dom/card1/a1.png"
                   alt="Image 1"
                   class="main-img active"
                 />
                 <img
-                  src="./images/prodject/card1/b.png"
+                  src="./images/prodject/dom/card1/b1.png"
                   alt="Image 2"
                   class="main-img"
                 />
                 <img
-                  src="./images/prodject/card1/c.png"
+                  src="./images/prodject/dom/card1/c1.png"
                   alt="Image 3"
                   class="main-img"
                 />
                 <img
-                  src="./images/prodject/card1/d.png"
+                  src="./images/prodject/dom/card1/d1.png"
                   alt="Image 4"
                   class="main-img"
                 />
                 <img
-                  src="./images/prodject/card1/f.png"
+                  src="./images/prodject/dom/card1/e1.png"
                   alt="Image 5"
                   class="main-img"
                 />
-                <img
-                  src="./images/prodject/card1/g.png"
+                                <img
+                  src="./images/prodject/dom/card1/g1.png"
                   alt="Image 6"
                   class="main-img"
                 />
@@ -174,157 +187,37 @@
               </div>
               <div class="thumbnails-container">
                 <img
-                  src="./images/prodject/card1/a.png"
+                  src="./images/prodject/dom/card1/a1.png"
                   alt="Thumb 1"
                   class="thumb active"
                   data-index="0"
                 />
                 <img
-                  src="./images/prodject/card1/b.png"
+                  src="./images/prodject/dom/card1/b1.png"
                   alt="Thumb 2"
                   class="thumb"
                   data-index="1"
                 />
                 <img
-                  src="./images/prodject/card1/c.png"
+                  src="./images/prodject/dom/card1/c1.png"
                   alt="Thumb 3"
                   class="thumb"
                   data-index="2"
                 />
                 <img
-                  src="./images/prodject/card1/d.png"
+                  src="./images/prodject/dom/card1/d1.png"
                   alt="Thumb 4"
                   class="thumb"
                   data-index="3"
                 />
                 <img
-                  src="./images/prodject/card1/f.png"
-                  alt="Thumb 4"
-                  class="thumb"
-                  data-index="4"
-                />
-                <img
-                  src="./images/prodject/card1/g.png"
-                  alt="Thumb 4"
-                  class="thumb"
-                  data-index="5"
-                />
-              </div>
-            </div>
-            <div class="card__project-ithem">
-              <h1 class="">Проект “Ершовка”</h1>
-              <ul class="project__description-item">
-                <li class="text-item">
-                  Одноэтажный дом
-                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
-                </li>
-                <li class="text-item">
-                  Оцилиндрованное бревно
-                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
-                </li>
-                <li class="text-item">
-                  Материал стен:
-                  <span style="color: #79081a"><b>Сосна</b></span>
-                </li>
-                <li class="text-item">
-                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
-                </li>
-              </ul>
-              <hr class="line" />
-              <div class="price-list-column">
-                <div class="price-block">
-                  <p class="price-item">
-                    Цена за сруб с монтажом и&nbsp;доставкой
-                  </p>
-                  <h3 style="color: #79081a">от 2 310 000 руб.</h3>
-                </div>
-                <div class="price-block">
-                  <p class="price-item">
-                    Цена за сруб с монтажом, доставкой, фундаментом
-                    и&nbsp;кровлей
-                  </p>
-                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
-                </div>
-              </div>
-              <div class="gallery-subtitle">
-                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
-                <a href="tel:+7 927 770 85 95"
-                  ><button class="gallery-button">подробнее</button></a
-                >
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="content-section projekt__card projekt__card-text">
-          <article class="projekt__slider">
-            <div class="slider-container">
-              <div class="main-window" id="mainWindow">
-                <img
-                  src="./images/prodject/card2/a1.png"
-                  alt="Image 1"
-                  class="main-img active"
-                />
-                <img
-                  src="./images/prodject/card2/b1.png"
-                  alt="Image 2"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card2/c1.png"
-                  alt="Image 3"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card2/d1.png"
-                  alt="Image 4"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card2/f1.png"
-                  alt="Image 5"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card2/g1.png"
-                  alt="Image 6"
-                  class="main-img"
-                />
-                <button class="nav-btn prev-btn">&lt;</button>
-                <button class="nav-btn next-btn">&gt;</button>
-              </div>
-              <div class="thumbnails-container">
-                <img
-                  src="./images/prodject/card2/a1.png"
-                  alt="Thumb 1"
-                  class="thumb active"
-                  data-index="0"
-                />
-                <img
-                  src="./images/prodject/card2/b1.png"
-                  alt="Thumb 2"
-                  class="thumb"
-                  data-index="1"
-                />
-                <img
-                  src="./images/prodject/card2/c1.png"
-                  alt="Thumb 3"
-                  class="thumb"
-                  data-index="2"
-                />
-                <img
-                  src="./images/prodject/card2/d1.png"
-                  alt="Thumb 4"
-                  class="thumb"
-                  data-index="3"
-                />
-                <img
-                  src="./images/prodject/card2/f1.png"
+                  src="./images/prodject/dom/card1/e1.png"
                   alt="Thumb 5"
                   class="thumb"
                   data-index="4"
                 />
-                <img
-                  src="./images/prodject/card2/g1.png"
+                                <img
+                  src="./images/prodject/dom/card1/g1.png"
                   alt="Thumb 6"
                   class="thumb"
                   data-index="5"
@@ -332,22 +225,22 @@
               </div>
             </div>
             <div class="card__project-ithem">
-              <h1 class="">Проект “Ершовка”</h1>
+              <h1 class="">Проект “Немец”</h1>
               <ul class="project__description-item">
                 <li class="text-item">
                   Одноэтажный дом
                   <span style="color: #79081a"><b>105&nbsp;м2</b></span>
                 </li>
                 <li class="text-item">
-                  Оцилиндрованное бревно
+                  Рубленное бревно
                   <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
                 </li>
                 <li class="text-item">
                   Материал стен:
-                  <span style="color: #79081a"><b>Сосна</b></span>
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
                 </li>
                 <li class="text-item">
-                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
                 </li>
               </ul>
               <hr class="line" />
@@ -356,7 +249,7 @@
                   <p class="price-item">
                     Цена за сруб с монтажом и&nbsp;доставкой
                   </p>
-                  <h3 style="color: #79081a">от 2 310 000 руб.</h3>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
                 </div>
                 <div class="price-block">
                   <p class="price-item">
@@ -375,201 +268,33 @@
             </div>
           </article>
         </div>
-        <div class="content-section projekt__card projekt__card-text">
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
           <article class="projekt__slider">
             <div class="slider-container">
               <div class="main-window" id="mainWindow">
                 <img
-                  src="./images/prodject/card3/a3.png"
+                  src="./images/prodject/dom/card2/a2.png"
                   alt="Image 1"
                   class="main-img active"
                 />
                 <img
-                  src="./images/prodject/card3/b3.png"
+                  src="./images/prodject/dom/card2/b2.png"
                   alt="Image 2"
                   class="main-img"
                 />
                 <img
-                  src="./images/prodject/card3/c3.png"
+                  src="./images/prodject/dom/card2/c2.png"
                   alt="Image 3"
                   class="main-img"
                 />
                 <img
-                  src="./images/prodject/card3/d3.png"
+                  src="./images/prodject/dom/card2/d2.png"
                   alt="Image 4"
                   class="main-img"
                 />
                 <img
-                  src="./images/prodject/card3/e3.png"
+                  src="./images/prodject/dom/card2/e2.png"
                   alt="Image 5"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card3/f3.png"
-                  alt="Image 6"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card3/g3.png"
-                  alt="Image 7"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card3/h3.png"
-                  alt="Image 8"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card3/i3.png"
-                  alt="Image 9"
-                  class="main-img"
-                />
-                <button class="nav-btn prev-btn">&lt;</button>
-                <button class="nav-btn next-btn">&gt;</button>
-              </div>
-              <div class="thumbnails-container">
-                <img
-                  src="./images/prodject/card3/a3.png"
-                  alt="Thumb 1"
-                  class="thumb active"
-                  data-index="0"
-                />
-                <img
-                  src="./images/prodject/card3/b3.png"
-                  alt="Thumb 2"
-                  class="thumb"
-                  data-index="1"
-                />
-                <img
-                  src="./images/prodject/card3/c3.png"
-                  alt="Thumb 3"
-                  class="thumb"
-                  data-index="2"
-                />
-                <img
-                  src="./images/prodject/card3/d3.png"
-                  alt="Thumb 4"
-                  class="thumb"
-                  data-index="3"
-                />
-                <img
-                  src="./images/prodject/card3/e3.png"
-                  alt="Thumb 5"
-                  class="thumb"
-                  data-index="4"
-                />
-                <img
-                  src="./images/prodject/card3/f3.png"
-                  alt="Thumb 6"
-                  class="thumb"
-                  data-index="5"
-                />
-                <img
-                  src="./images/prodject/card3/g3.png"
-                  alt="Thumb 7"
-                  class="thumb"
-                  data-index="6"
-                />
-                <img
-                  src="./images/prodject/card3/h3.png"
-                  alt="Thumb 8"
-                  class="thumb"
-                  data-index="7"
-                />
-                <img
-                  src="./images/prodject/card3/i3.png"
-                  alt="Thumb 9"
-                  class="thumb"
-                  data-index="8"
-                />
-              </div>
-            </div>
-            <div class="card__project-ithem">
-              <h1 class="">Проект “Ершовка”</h1>
-              <ul class="project__description-item">
-                <li class="text-item">
-                  Одноэтажный дом
-                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
-                </li>
-                <li class="text-item">
-                  Оцилиндрованное бревно
-                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
-                </li>
-                <li class="text-item">
-                  Материал стен:
-                  <span style="color: #79081a"><b>Сосна</b></span>
-                </li>
-                <li class="text-item">
-                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
-                </li>
-              </ul>
-              <hr class="line" />
-              <div class="price-list-column">
-                <div class="price-block">
-                  <p class="price-item">
-                    Цена за сруб с монтажом и&nbsp;доставкой
-                  </p>
-                  <h3 style="color: #79081a">от 2 310 000 руб.</h3>
-                </div>
-                <div class="price-block">
-                  <p class="price-item">
-                    Цена за сруб с монтажом, доставкой, фундаментом
-                    и&nbsp;кровлей
-                  </p>
-                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
-                </div>
-              </div>
-              <div class="gallery-subtitle">
-                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
-                <a href="tel:+7 927 770 85 95"
-                  ><button class="gallery-button">подробнее</button></a
-                >
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="content-section projekt__card projekt__card-text">
-          <article class="projekt__slider">
-            <div class="slider-container">
-              <div class="main-window" id="mainWindow">
-                <img
-                  src="./images/prodject/card4/a4.png"
-                  alt="Image 1"
-                  class="main-img active"
-                />
-                <img
-                  src="./images/prodject/card4/b4.png"
-                  alt="Image 2"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card4/c4.png"
-                  alt="Image 3"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card4/d4.png"
-                  alt="Image 4"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card4/e4.png"
-                  alt="Image 5"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card4/f4.png"
-                  alt="Image 6"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card4/g4.png"
-                  alt="Image 7"
-                  class="main-img"
-                />
-                <img
-                  src="./images/prodject/card4/h4.png"
-                  alt="Image 8"
                   class="main-img"
                 />
 
@@ -578,72 +303,54 @@
               </div>
               <div class="thumbnails-container">
                 <img
-                  src="./images/prodject/card4/a4.png"
+                  src="./images/prodject/dom/card2/a2.png"
                   alt="Thumb 1"
                   class="thumb active"
                   data-index="0"
                 />
                 <img
-                  src="./images/prodject/card4/b4.png"
+                  src="./images/prodject/dom/card2/b2.png"
                   alt="Thumb 2"
                   class="thumb"
                   data-index="1"
                 />
                 <img
-                  src="./images/prodject/card4/c4.png"
+                  src="./images/prodject/dom/card2/c2.png"
                   alt="Thumb 3"
                   class="thumb"
                   data-index="2"
                 />
                 <img
-                  src="./images/prodject/card4/d4.png"
+                  src="./images/prodject/dom/card2/d2.png"
                   alt="Thumb 4"
                   class="thumb"
                   data-index="3"
                 />
                 <img
-                  src="./images/prodject/card4/e4.png"
+                  src="./images/prodject/dom/card2/e2.png"
                   alt="Thumb 5"
                   class="thumb"
                   data-index="4"
                 />
-                <img
-                  src="./images/prodject/card4/f4.png"
-                  alt="Thumb 6"
-                  class="thumb"
-                  data-index="5"
-                />
-                <img
-                  src="./images/prodject/card4/g4.png"
-                  alt="Thumb 7"
-                  class="thumb"
-                  data-index="6"
-                />
-                <img
-                  src="./images/prodject/card4/h4.png"
-                  alt="Thumb 8"
-                  class="thumb"
-                  data-index="7"
-                />
               </div>
             </div>
             <div class="card__project-ithem">
-              <h1 class="">Проект “Ершовка”</h1>
+              <h1 class="">Проект “Тубаевка”</h1>
               <ul class="project__description-item">
                 <li class="text-item">
                   Одноэтажный дом
                   <span style="color: #79081a"><b>105&nbsp;м2</b></span>
                 </li>
                 <li class="text-item">
-                  Оцилиндрованное бревно
+                  Рубленное бревно
                   <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
                 </li>
                 <li class="text-item">
                   Материал стен:
-                  <span style="color: #79081a"><b>Сосна</b></span>
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
                 </li>
                 <li class="text-item">
-                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
                 </li>
               </ul>
               <hr class="line" />
@@ -652,7 +359,7 @@
                   <p class="price-item">
                     Цена за сруб с монтажом и&nbsp;доставкой
                   </p>
-                  <h3 style="color: #79081a">от 2 310 000 руб.</h3>
+                <h3 style="color: #79081a">от 3 528 750 руб.</h3>
                 </div>
                 <div class="price-block">
                   <p class="price-item">
@@ -671,43 +378,153 @@
             </div>
           </article>
         </div>
-        <div class="content-section projekt__card projekt__card-text">
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
           <article class="projekt__slider">
             <div class="slider-container">
               <div class="main-window" id="mainWindow">
                 <img
-                  src="./images/prodject/card5/a5.png"
+                  src="./images/prodject/dom/card3/a3.png"
                   alt="Image 1"
                   class="main-img active"
                 />
                 <img
-                  src="./images/prodject/card5/b5.png"
+                  src="./images/prodject/dom/card3/b3.png"
                   alt="Image 2"
                   class="main-img"
                 />
                 <img
-                  src="./images/prodject/card5/c5.png"
+                  src="./images/prodject/dom/card3/c3.png"
                   alt="Image 3"
                   class="main-img"
                 />
                 <img
-                  src="./images/prodject/card5/d5.png"
+                  src="./images/prodject/dom/card3/d3.png"
                   alt="Image 4"
                   class="main-img"
                 />
                 <img
-                  src="./images/prodject/card5/e5.png"
+                  src="./images/prodject/dom/card3/e3.png"
                   alt="Image 5"
                   class="main-img"
                 />
                 <img
-                  src="./images/prodject/card5/f5.png"
+                  src="./images/prodject/dom/card3/f3.png"
                   alt="Image 6"
                   class="main-img"
                 />
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
                 <img
-                  src="./images/prodject/card5/g5.png"
-                  alt="Image 7"
+                  src="./images/prodject/dom/card3/a3.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card3/b3.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card3/c3.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card3/d3.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+                <img
+                  src="./images/prodject/dom/card3/e3.png"
+                  alt="Thumb 5"
+                  class="thumb"
+                  data-index="4"
+                />
+                                <img
+                  src="./images/prodject/dom/card3/f3.png"
+                  alt="Thumb 6"
+                  class="thumb"
+                  data-index="5"
+                />
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Рачково”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Двухэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 20 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card4/a4.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card4/b4.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card4/e4.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card4/d4.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card4/c4.png"
+                  alt="Image 5"
                   class="main-img"
                 />
 
@@ -716,46 +533,1378 @@
               </div>
               <div class="thumbnails-container">
                 <img
-                  src="./images/prodject/card5/a5.png"
+                  src="./images/prodject/dom/card4/a4.png"
                   alt="Thumb 1"
                   class="thumb active"
                   data-index="0"
                 />
                 <img
-                  src="./images/prodject/card5/b5.png"
+                  src="./images/prodject/dom/card4/b4.png"
                   alt="Thumb 2"
                   class="thumb"
                   data-index="1"
                 />
                 <img
-                  src="./images/prodject/card5/c5.png"
+                  src="./images/prodject/dom/card4/e4.png"
                   alt="Thumb 3"
                   class="thumb"
                   data-index="2"
                 />
                 <img
-                  src="./images/prodject/card5/d5.png"
+                  src="./images/prodject/dom/card4/d4.png"
                   alt="Thumb 4"
                   class="thumb"
                   data-index="3"
                 />
                 <img
-                  src="./images/prodject/card5/e5.png"
+                  src="./images/prodject/dom/card4/c4.png"
+                  alt="Thumb 5"
+                  class="thumb"
+                  data-index="4"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Сосновка”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Рубленное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card5/a5.jpg"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card5/b5.jpg"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card5/c5.jpg"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card5/d5.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card5/e5.jpg"
+                  alt="Image 5"
+                  class="main-img"
+                />
+
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card5/a5.jpg"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card5/b5.jpg"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card5/c5.jpg"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card5/d5.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+                <img
+                  src="./images/prodject/dom/card5/e5.jpg"
+                  alt="Thumb 5"
+                  class="thumb"
+                  data-index="4"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Рыбное”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                 <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card6/a6.jpg"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card6/b6.jpg"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card6/c6.jpg"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card6/d6.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card6/a6.jpg"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card6/b6.jpg"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card6/c6.jpg"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card6/d6.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект Нордик</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+               <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card7/a7.jpg"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card7/b7.jpg"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card7/c7.jpg"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card7/d7.jpg"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                                <img
+                  src="./images/prodject/dom/card7/e7.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card7/a7.jpg"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card7/b7.jpg"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card7/c7.jpg"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card7/d7.jpg"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+                <img
+                  src="./images/prodject/dom/card7/e7.png"
+                  alt="Thumb 5"
+                  class="thumb"
+                  data-index="4"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект Юдаково</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card8/a8.jpg"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card8/b8.jpg"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card8/c8.jpg"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card8/d8.jpg"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                                <img
+                  src="./images/prodject/dom/card8/e8.jpg"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card8/a8.jpg"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card8/b8.jpg"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card8/c8.jpg"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card8/d8.jpg"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+                <img
+                  src="./images/prodject/dom/card8/e8.jpg"
+                  alt="Thumb 5"
+                  class="thumb"
+                  data-index="4"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект "Галяевка"</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 2 300 000 руб</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card9/a9.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card9/b9.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card9/c9.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card9/d9.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card9/a9.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card9/b9.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card9/c9.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card9/d9.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект "Крестовая поляна"</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 2 300 000 руб</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"><button class="gallery-button">подробнее</button></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card10/a10.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card10/b10.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card10/c10.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card10/d10.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card10/a10.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card10/b10.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card10/c10.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card10/d10.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект "Ферапонтово"</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 2 300 000 руб</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"><button class="gallery-button">подробнее</button></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card11/a11.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card11/b11.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card11/c11.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card11/d11.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card11/a11.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card11/b11.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card11/c11.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card11/d11.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект "Глазуново"</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 2 300 000 руб</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"><button class="gallery-button">подробнее</button></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card12/a12.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card12/b12.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card12/c12.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card12/d12.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card12/a12.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card12/b12.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card12/c12.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card12/d12.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект "Руднево"</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 2 300 000 руб</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"><button class="gallery-button">подробнее</button></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card13/a13.jpg"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card13/b13.jpg"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card13/c13.jpg"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card13/d13.jpg"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card13/e13.jpg"
+                  alt="Image 5"
+                  class="main-img"
+                />
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card13/a13.jpg"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card13/b13.jpg"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card13/c13.jpg"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card13/d13.jpg"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+                <img
+                  src="./images/prodject/dom/card13/e13.jpg"
+                  alt="Thumb 5"
+                  class="thumb"
+                  data-index="4"
+                />
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект "Мельничное"</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 2 300 000 руб</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"><button class="gallery-button">подробнее</button></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card14/a14.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card14/b14.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card14/c14.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card14/d14.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card14/a14.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card14/b14.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card14/c14.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card14/d14.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект "Костенеево"</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 2 300 000 руб</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"><button class="gallery-button">подробнее</button></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/dom/card15/a15.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card15/b15.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card15/c15.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card15/d15.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card15/e15.png"
+                  alt="Image 5"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card15/f15.png"
+                  alt="Image 6"
+                  class="main-img"
+                />
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card15/a15.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card15/b15.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card15/c15.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card15/d15.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+                <img
+                  src="./images/prodject/dom/card15/e15.png"
                   alt="Thumb 5"
                   class="thumb"
                   data-index="4"
                 />
                 <img
-                  src="./images/prodject/card5/f5.png"
+                  src="./images/prodject/dom/card15/f15.png"
                   alt="Thumb 6"
                   class="thumb"
                   data-index="5"
                 />
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект "Кукурузное"</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 2 300 000 руб</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"><button class="gallery-button">подробнее</button></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-dom">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
                 <img
-                  src="./images/prodject/card5/g5.png"
-                  alt="Thumb 7"
+                  src="./images/prodject/dom/card16/a16.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/dom/card16/b16.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card16/c16.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card16/d16.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/dom/card16/e16.png"
+                  alt="Image 5"
+                  class="main-img"
+                />
+                 <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/dom/card16/a16.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/dom/card16/b16.png"
+                  alt="Thumb 2"
                   class="thumb"
-                  data-index="6"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/dom/card16/c16.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/dom/card16/d16.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+                <img
+                  src="./images/prodject/dom/card16/e16.png"
+                  alt="Thumb 5"
+                  class="thumb"
+                  data-index="4"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект "Центральный"</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна 22-24 Ø</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>7м х 8м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 2 300 000 руб</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"><button class="gallery-button">подробнее</button></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!--бани-->
+       <div class="content-section projekt__card projekt__card-text card-one type-banja">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/banja/card1/a1.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/banja/card1/b1.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card1/c1.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/banja/card1/a1.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/banja/card1/b1.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/banja/card1/c1.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
                 />
               </div>
             </div>
@@ -784,7 +1933,7 @@
                   <p class="price-item">
                     Цена за сруб с монтажом и&nbsp;доставкой
                   </p>
-                  <h3 style="color: #79081a">от 2 310 000 руб.</h3>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
                 </div>
                 <div class="price-block">
                   <p class="price-item">
@@ -803,7 +1952,928 @@
             </div>
           </article>
         </div>
-      </section>
+        <div class="content-section projekt__card projekt__card-text card-one type-banja">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/banja/card2/a2.jpg"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/banja/card2/b2.jpg"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card2/c2.jpg"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card2/d2.jpg"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card2/e2.png"
+                  alt="Image 5"
+                  class="main-img"
+                />                
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/banja/card2/a2.jpg"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/banja/card2/b2.jpg"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/banja/card2/c2.jpg"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                                <img
+                  src="./images/prodject/banja/card2/d2.jpg"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+                <img
+                  src="./images/prodject/banja/card2/e2.png"
+                  alt="Thumb 5"
+                  class="thumb"
+                  data-index="4"
+                />
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Ершовка”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                 <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-banja">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/banja/card3/a3.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/banja/card3/b3.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card3/c3.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card3/d3.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+ 
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/banja/card3/a3.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/banja/card3/b3.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/banja/card3/c3.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                                <img
+                  src="./images/prodject/banja/card3/d3.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Ершовка”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-banja">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/banja/card4/a4.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/banja/card4/b4.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card4/c4.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card4/d4.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+ 
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/banja/card4/a4.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/banja/card4/b4.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/banja/card4/c4.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                                <img
+                  src="./images/prodject/banja/card4/d4.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Ершовка”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-banja">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/banja/card5/a5.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/banja/card5/b5.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card5/c5.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/car5/d5.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+ 
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/banja/card5/a5.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/banja/card5/b5.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/banja/card5/c5.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                                <img
+                  src="./images/prodject/banja/card5/d5.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Ершовка”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-banja">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/banja/card6/a6.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/banja/card6/b6.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card6/c6.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card6/d6.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                 <img
+                  src="./images/prodject/banja/card6/e6.png"
+                  alt="Image 5"
+                  class="main-img"
+                />
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/banja/card6/a6.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/banja/card6/b6.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/banja/card6/c6.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                                <img
+                  src="./images/prodject/banja/card6/d6.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+                                <img
+                  src="./images/prodject/banja/card6/e6.png"
+                  alt="Thumb 5"
+                  class="thumb"
+                  data-index="4"
+                />
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Ершовка”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                 <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-banja">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/banja/card7/a7.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/banja/card7/b7.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card7/c7.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card7/d7.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/banja/card7/a7.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/banja/card7/b7.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/banja/card7/c7.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                                <img
+                  src="./images/prodject/banja/card7/d7.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Ершовка”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-banja">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/banja/card8/a8.jpg"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/banja/card8/b8.jpg"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card8/c8.jpg"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card8/d8.jpg"
+                  alt="Image 4"
+                  class="main-img"
+                />
+
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/banja/card8/a8.jpg"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/banja/card8/b8.jpg"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/banja/card8/c8.jpg"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                                <img
+                  src="./images/prodject/banja/card8/d8.jpg"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Ершовка”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+         <div class="content-section projekt__card projekt__card-text card-one type-banja">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/banja/card9/a9.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/banja/card9/b9.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card9/c9.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+
+
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/banja/card9/a9.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/banja/card9/b9.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/banja/card9/c9.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Ершовка”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="content-section projekt__card projekt__card-text card-one type-banja">
+          <article class="projekt__slider">
+            <div class="slider-container">
+              <div class="main-window" id="mainWindow">
+                <img
+                  src="./images/prodject/banja/card10/a10.png"
+                  alt="Image 1"
+                  class="main-img active"
+                />
+                <img
+                  src="./images/prodject/banja/card10/b10.png"
+                  alt="Image 2"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card10/c10.png"
+                  alt="Image 3"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card10/d10.png"
+                  alt="Image 4"
+                  class="main-img"
+                />
+                <img
+                  src="./images/prodject/banja/card10/e10.png"
+                  alt="Image 5"
+                  class="main-img"
+                />
+
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+              </div>
+              <div class="thumbnails-container">
+                <img
+                  src="./images/prodject/banja/card10/a10.png"
+                  alt="Thumb 1"
+                  class="thumb active"
+                  data-index="0"
+                />
+                <img
+                  src="./images/prodject/banja/card10/b10.png"
+                  alt="Thumb 2"
+                  class="thumb"
+                  data-index="1"
+                />
+                <img
+                  src="./images/prodject/banja/card10/c10.png"
+                  alt="Thumb 3"
+                  class="thumb"
+                  data-index="2"
+                />
+                <img
+                  src="./images/prodject/banja/card10/d10.png"
+                  alt="Thumb 4"
+                  class="thumb"
+                  data-index="3"
+                />
+                <img
+                  src="./images/prodject/banja/card10/e10.png"
+                  alt="Thumb 5"
+                  class="thumb"
+                  data-index="4"
+                />
+
+              </div>
+            </div>
+            <div class="card__project-ithem">
+              <h1 class="">Проект “Ершовка”</h1>
+              <ul class="project__description-item">
+                <li class="text-item">
+                  Одноэтажный дом
+                  <span style="color: #79081a"><b>105&nbsp;м2</b></span>
+                </li>
+                <li class="text-item">
+                  Оцилиндрованное бревно
+                  <span style="color: #79081a"><b>Ø&nbsp;200&nbsp;мм</b></span>
+                </li>
+                <li class="text-item">
+                  Материал стен:
+                  <span style="color: #79081a"><b>Сосна</b></span>
+                </li>
+                <li class="text-item">
+                  Размер: <span style="color: #79081a"><b>9м х 11.6м</b></span>
+                </li>
+              </ul>
+              <hr class="line" />
+              <div class="price-list-column">
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом и&nbsp;доставкой
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+                <div class="price-block">
+                  <p class="price-item">
+                    Цена за сруб с монтажом, доставкой, фундаментом
+                    и&nbsp;кровлей
+                  </p>
+                  <h3 style="color: #79081a">от 3 528 750 руб.</h3>
+                </div>
+              </div>
+              <div class="gallery-subtitle">
+                <p class="text-item">Свяжитесь с мастером для уточнения цены</p>
+                <a href="tel:+7 927 770 85 95"
+                  ><button class="gallery-button">подробнее</button></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+
+   </div>
+  <!-- -->
+</section>
       <script>
         // Находим ВСЕ блоки слайдеров на странице
         const sliderContainers = document.querySelectorAll(".slider-container");
@@ -887,93 +2957,84 @@
         });
       </script>
     </main>
-    <footer class="footer content-section content-section_theme_red">
-      <address class="footer_adress">
+      <footer class="footer content-section content-section_theme_red">
+        <address class="footer_adress">
         <div class="footer-block">
           <a class="footer__icon" href="#0">
-            <img class="footer__geo" src="./images/metka.svg" alt="Макс" />
-          </a>
-          <div class="address-block__item">
-            <h3>Производство</h3>
-            <p class="geo text-item">
-              Самарская обл. Ставропольский р-н, с Ягодное, ул. Дружная д.9
-            </p>
-          </div>
+          <img class="footer__geo" src="./images/metka.svg" alt="Макс">
+         </a>
+        <div class="address-block__item">
+    <h3> Производство</h3>
+    <p class="geo text-item">Самарская обл. Ставропольский р-н, с Ягодное, ул. Дружная д.9</p>
+  </div>
         </div>
-      </address>
-      <div class="logo_ithem">
-        <a class="footer__logo">
-          <img
-            class="footer__logo-image"
-            src="../images/logo_white.svg"
-            alt="Лого"
-          />
-        </a>
-      </div>
-
-      <ul class="footer__social-list-item">
-        <!-- display  -->
-        <li>
-          <a href="#0">
-            <img
-              class="social-icon"
-              src="./images/max_withe.svg"
-              alt="иконка макс"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="https://vk.ru/sergey_srub_banja">
-            <img class="social-icon" src="./images/vk.svg" alt="иконка вк" />
-          </a>
-        </li>
-        <li>
-          <a href="https://t.me/Srub_Banja">
-            <img
-              class="social-icon"
-              src="./images/tg.svg"
-              alt="иконка телеграм"
-            />
-          </a>
-        </li>
-      </ul>
-
-      <address class="footer_adress-office">
-        <div class="footer-block">
-          <a class="footer__icon" href="#0">
-            <img class="footer__geo" src="./images/metka.svg" alt="Макс" />
-          </a>
-          <div class="address-block__item">
-            <h3>Офис</h3>
-            <p class="geo text-item">
-              Самарская обл. Ставропольский р-н, с Ягодное, ул. Дружная д.9
-            </p>
-          </div>
+        </address>
+        <div class="logo_ithem">
+            <a class="footer__logo" href="index.html">
+        <img class="footer__logo-image" src="../images/logo_white.svg" alt="Лого">
+      </a>
         </div>
-      </address>
-      <nav>
-        <ul class="footer__menu-list">
+        
+        <ul class="footer__social-list-item">
+          <!-- display  -->
           <li>
-            <a class="footer__menu-link link-active text-item" href="0"
-              >главная</a
-            >
+            <a href="#0">
+              <img
+                class="social-icon"
+                src="./images/max_withe.svg"
+                alt="иконка макс"
+              />
+            </a>
           </li>
           <li>
-            <a class="footer__menu-link text-item" href="#0">проекты</a>
+            <a href="https://vk.ru/sergey_srub_banja">
+              <img class="social-icon" src="./images/vk.svg" alt="иконка вк" />
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/Srub_Banja">
+              <img
+                class="social-icon"
+                src="./images/tg.svg"
+                alt="иконка телеграм"
+              />
+            </a>
+          </li>
+        </ul>
+   
+        <address class="footer_adress-office">
+        <div class="footer-block">
+          <a class="footer__icon" href="#0">
+          <img class="footer__geo" src="./images/metka.svg" alt="Макс">
+        </a>
+        <div class="address-block__item">
+    <h3> Офис</h3>
+    <p class="geo text-item">Самарская обл. Ставропольский р-н, с Ягодное, ул. Дружная д.9</p>
+       </div>
+        </div>
+       </address>
+       <nav>
+       
+
+        <ul class="footer__menu-list">
+
+          <li>
+            <a class="footer__menu-link link-active text-item" href="0">главная</a>
+          </li>
+          <li>
+            <a class="footer__menu-link text-item" href="index2.html">проекты</a>
           </li>
           <li>
             <a class="footer__menu-link text-item" href="#0">о нас</a>
           </li>
         </ul>
       </nav>
-      <div class="footer_contact">
-        <a class="address-block__link text-item" href="tel:+7 927 770 85 95"
-          >+7 927 770 85 95</a
+        <div class="footer_contact">
+        <a class="address-block__link text-item" href="tel:+7 902 299 6176"
+          >+7 902 299 6176</a
         >
-        <a
-          class="address-block__link text-item"
-          href="mailto:pflugfelder.sv@yandex.ru"
-          >pflugfelder.sv@yandex.ru</a
+        <a class="address-block__link text-item" href="mailto:pflugfelder.sv@yandex.ru"
+          >info@srub-dom63.ru</a
         >
       </div>
     </footer>
